@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    /* padding 과 border를 포함해서 박스 사이즈가 늘어나는 것을 박스 안쪽으로 가둔다. */
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+em,
+i,
+address {
+    font-style: normal;
+}
+
+b,
+strong {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+#map {
+    border: 15px solid #fff;
+    outline: 1px solid #ddd;
+    padding: 15px;
+    margin: 0 0 40px 0;
+}
+
+header {
+    line-height: 80px;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {}
+
+header h1 a {
+    font-size: 25px;
+    font-weight: 700;
+}
