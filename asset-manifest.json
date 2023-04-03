@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react_busan_food/static/css/main.07e90a02.css",
+    "main.js": "/react_busan_food/static/js/main.04866645.js",
+    "index.html": "/react_busan_food/index.html",
+    "main.07e90a02.css.map": "/react_busan_food/static/css/main.07e90a02.css.map",
+    "main.04866645.js.map": "/react_busan_food/static/js/main.04866645.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07e90a02.css",
+    "static/js/main.04866645.js"
+  ]
+}
