@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const UL = styled.ul`
-    margin: 30px 100px
+    margin: 30px 100px;
 `
 
 const INFO = styled.div`

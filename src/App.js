@@ -2,12 +2,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./pages/Layout";
-import Nav from "./pages/Nav";
 import AllLsit from "./pages/AllLsit";
 import GuList from "./pages/GuList";
 import Itm from "./pages/Itm";
-
-import './styles/style.css';
+import './styles/main.scss';
 
 const App = () => {
     const [busanFood, setBusanFood] = useState([]);

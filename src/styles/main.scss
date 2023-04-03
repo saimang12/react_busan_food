@@ -46,15 +46,16 @@ img {
 }
 
 header {
-    line-height: 80px;
     border-bottom: 1px solid #ddd;
-}
 
-header h1 {
-    a {
-        font-size: 25px;
-        font-weight: 700;
+    h1 {
+        line-height: 80px;
+
+        a {
+            font-size: 25px;
+            font-weight: 700;
+        }
     }
-}
 
-header h1
+
+}
