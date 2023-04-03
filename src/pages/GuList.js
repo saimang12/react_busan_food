@@ -59,25 +59,28 @@ const GuList = ({ busanFood }) => {
 
 
     return (
-        <>
+        <div className="gu_list">
             <div id="map" style={{ height: "500px" }}></div>
-            <ul>
-                {
-                    guList.map(it => {
-                        return (
-                            <li key={it.UC_SEQ}>
-                                <Link to={`/store/${it.TITLE}`}>
-                                    <h3>{it.TITLE}</h3>
-                                    <figure>
-                                        <img src={it.MAIN_IMG_NORMAL} alt={it.TITLE} />
-                                    </figure>
-                                </Link>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-        </>
+            <div className="inner">
+                <ul>
+                    {
+                        guList.map(it => {
+                            return (
+                                <li key={it.UC_SEQ}>
+                                    <Link to={`/store/${it.TITLE}`}>
+                                        <h3>{it.TITLE}</h3>
+                                        <figure>
+                                            <img src={it.MAIN_IMG_NORMAL} alt={it.TITLE} />
+                                        </figure>
+                                    </Link>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
+
+        </div>
     )
 }
 

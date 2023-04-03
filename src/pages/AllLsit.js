@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
-import { UL } from "../styles/style";
 import { useEffect } from "react";
-import styled from "styled-components";
 
-const H3 = styled.h3`
-   
-`
 
 
 const AllLsit = ({ busanFood }) => {
@@ -56,9 +51,9 @@ const AllLsit = ({ busanFood }) => {
     }, [busanFood])
 
     return (
-        <>
+        <div className="all_list">
             {
-                <main>
+                <>
                     <div id="map" style={{ height: "500px", }}></div>
                     <div className="inner">
                         <ul>
@@ -83,11 +78,13 @@ const AllLsit = ({ busanFood }) => {
                         </ul>
                     </div>
 
+                </>
 
-                </main>
+
+
             }
 
-        </>
+        </div>
     )
 }
 

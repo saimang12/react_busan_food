@@ -62,42 +62,44 @@ header {
         }
 
         ul {
-            >li {
-                >a {
-                    font-weight: 500;
-                }
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            line-height: 40px;
 
+            li {
+                font-weight: 500;
             }
-
         }
     }
 
 }
 
-main {
+.all_list {
     .inner {
-        padding: 30px 0 100px 0;
         width: 1600px;
         margin: 0 auto;
 
-        >ul {
-            >li {
-                display: flex;
-                gap: 30px;
-                border-bottom: 1px solid #000;
-
-                a {
-                    flex: 6;
-                }
-
-                .desc {
-                    flex: 4;
-                }
-            }
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
         }
     }
 }
 
+.gu_list {
+    .inner {
+        width: 1600px;
+        margin: 0 auto;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+    }
+}
 
 
 
