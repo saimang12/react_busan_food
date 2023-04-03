@@ -61,13 +61,13 @@ const GuList = ({ busanFood }) => {
     return (
         <>
             <div id="map" style={{ height: "500px" }}></div>
-            <UL>
+            <ul>
                 {
                     guList.map(it => {
                         return (
                             <li key={it.UC_SEQ}>
                                 <Link to={`/store/${it.TITLE}`}>
-                                    <H3>{it.TITLE}</H3>
+                                    <h3>{it.TITLE}</h3>
                                     <figure>
                                         <img src={it.MAIN_IMG_NORMAL} alt={it.TITLE} />
                                     </figure>
@@ -76,7 +76,7 @@ const GuList = ({ busanFood }) => {
                         )
                     })
                 }
-            </UL>
+            </ul>
         </>
     )
 }

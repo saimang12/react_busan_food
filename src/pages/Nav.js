@@ -11,13 +11,13 @@ line-height: 40px;
 const Nav = ({ gugun }) => {
     return (
         <nav>
-            <UL>
+            <ul>
                 {
                     gugun.map((it, idx) => <li key={idx}>
                         <Link to={`/${it}`}>{it}</Link>
                     </li>)
                 }
-            </UL>
+            </ul>
         </nav>
     )
 }

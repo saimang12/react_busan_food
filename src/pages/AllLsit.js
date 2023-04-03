@@ -4,8 +4,7 @@ import { useEffect } from "react";
 import styled from "styled-components";
 
 const H3 = styled.h3`
-    min-height: 40px;
-    margin: 0 0 5px 0;
+   
 `
 
 
@@ -59,26 +58,33 @@ const AllLsit = ({ busanFood }) => {
     return (
         <>
             {
-                <>
-                    <div id="map" style={{ height: "500px" }}></div>
-                    <UL>
-                        {
-                            busanFood.map(it => {
-                                return (
-                                    <li key={it.UC_SEQ}>
-                                        <Link to={`/store/${it.TITLE}`}>
-                                            <H3>[{it.GUGUN_NM}] {it.TITLE}</H3>
-                                            <figure>
-                                                <img src={it.MAIN_IMG_NORMAL} alt={it.TITLE} />
-                                            </figure>
-                                        </Link>
-                                    </li>
-                                )
-                            })
-                        }
-                    </UL>
+                <main>
+                    <div id="map" style={{ height: "500px", }}></div>
+                    <div className="inner">
+                        <ul>
+                            {
+                                busanFood.map(it => {
+                                    return (
+                                        <li key={it.UC_SEQ}>
+                                            <Link to={`/store/${it.TITLE}`}>
+                                                <figure>
+                                                    <img src={it.MAIN_IMG_NORMAL} alt={it.TITLE} />
+                                                </figure>
+                                            </Link>
+                                            <div className="desc">
+                                                <h3>[{it.GUGUN_NM}] {it.TITLE}</h3>
+                                                <p>123</p>
+                                            </div>
 
-                </>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
+
+
+                </main>
             }
 
         </>

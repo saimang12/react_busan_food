@@ -48,14 +48,74 @@ img {
 header {
     border-bottom: 1px solid #ddd;
 
-    h1 {
-        line-height: 80px;
+    .inner {
+        width: 1600px;
+        margin: 0 auto;
 
-        a {
-            font-size: 25px;
-            font-weight: 700;
+        h1 {
+            line-height: 60px;
+
+            a {
+                font-size: 25px;
+                font-weight: 700;
+            }
+        }
+
+        ul {
+            >li {
+                >a {
+                    font-weight: 500;
+                }
+
+            }
+
         }
     }
 
+}
 
+main {
+    .inner {
+        padding: 30px 0 100px 0;
+        width: 1600px;
+        margin: 0 auto;
+
+        >ul {
+            >li {
+                display: flex;
+                gap: 30px;
+                border-bottom: 1px solid #000;
+
+                a {
+                    flex: 6;
+                }
+
+                .desc {
+                    flex: 4;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+    padding: 50px 0;
+    background: #222;
+
+    .inner {
+        width: 1600px;
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+    }
 }
