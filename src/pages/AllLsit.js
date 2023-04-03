@@ -23,7 +23,7 @@ const AllLsit = ({ busanFood }) => {
             }
         });
 
-        console.log(positions)
+        console.log(busanFood)
 
         // 마커 이미지의 이미지 주소입니다
         var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
@@ -68,7 +68,9 @@ const AllLsit = ({ busanFood }) => {
                                             </Link>
                                             <div className="desc">
                                                 <h3>[{it.GUGUN_NM}] {it.TITLE}</h3>
-                                                <p>123</p>
+                                                <p>연락처 : {it.CNTCT_TEL}</p>
+                                                <p>대표메뉴 : {it.RPRSNTV_MENU}</p>
+                                                <span>{it.USAGE_DAY_WEEK_AND_TIME.replace()}</span>
                                             </div>
 
                                         </li>

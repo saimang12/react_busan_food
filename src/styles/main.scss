@@ -79,11 +79,44 @@ header {
     .inner {
         width: 1600px;
         margin: 0 auto;
+        padding: 30px 0 100px 0;
 
         ul {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
+            gap: 50px 30px;
+
+            li {
+                display: flex;
+
+
+                a {
+                    flex: 4.5;
+
+                    img {
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                }
+
+                .desc {
+                    flex: 5.5;
+                    padding: 20px 20px;
+                    background: #f4f4f4;
+
+                    h3 {
+                        margin: 0 0 10px 0;
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        line-height: 23px;
+                        font-size: 15px;
+                        word-break: keep-all;
+                    }
+                }
+            }
         }
     }
 }
@@ -92,11 +125,44 @@ header {
     .inner {
         width: 1600px;
         margin: 0 auto;
+        padding: 30px 0 100px 0;
 
         ul {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
+            gap: 50px 30px;
+
+            li {
+                display: flex;
+
+
+                a {
+                    flex: 4.5;
+
+                    img {
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                }
+
+                .desc {
+                    flex: 5.5;
+                    padding: 20px 20px;
+                    background: #f4f4f4;
+
+                    h3 {
+                        margin: 0 0 10px 0;
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        line-height: 23px;
+                        font-size: 15px;
+                        word-break: keep-all;
+                    }
+                }
+            }
         }
     }
 }

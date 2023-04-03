@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-import { UL } from "../styles/style";
 import { useEffect } from "react";
 import styled from "styled-components";
 
@@ -68,11 +67,16 @@ const GuList = ({ busanFood }) => {
                             return (
                                 <li key={it.UC_SEQ}>
                                     <Link to={`/store/${it.TITLE}`}>
-                                        <h3>{it.TITLE}</h3>
                                         <figure>
                                             <img src={it.MAIN_IMG_NORMAL} alt={it.TITLE} />
                                         </figure>
                                     </Link>
+                                    <div className="desc">
+                                        <h3>{it.TITLE}</h3>
+                                        <p>연락처 : {it.CNTCT_TEL}</p>
+                                        <p>대표메뉴 : {it.RPRSNTV_MENU}</p>
+
+                                    </div>
                                 </li>
                             )
                         })
