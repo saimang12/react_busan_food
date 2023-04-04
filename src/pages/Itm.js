@@ -5,10 +5,13 @@ import styled from "styled-components";
 const UL = styled.ul`
     margin: 30px 100px;
 `
-
+const Inner = styled.div`
+    width: 1600px;
+    margin: 0 auto;
+`
 const INFO = styled.div`
     display: flex;
-    gap: 50px;
+    
 `
 const Figure = styled.figure`
     flex: 1;
@@ -18,6 +21,9 @@ const Img = styled.img`
 `
 const DESC = styled.div`
     flex: 1;
+    padding: 20px 30px;
+    background: #f4f4f4;
+
 `
 const H3 = styled.h3`
     font-size: 20px;
@@ -50,7 +56,7 @@ const Itm = ({ busanFood }) => {
         var container = document.getElementById('map');
         var options = {
             center: new kakao.maps.LatLng(store.LAT, store.LNG),
-            level: 3
+            level: 1
         };
 
         var map = new kakao.maps.Map(container, options);
@@ -78,18 +84,21 @@ const Itm = ({ busanFood }) => {
                 store && <li>
 
                     <div id="map" style={{ height: "500px" }}></div>
-                    <INFO>
-                        <Figure>
-                            <Img src={store.MAIN_IMG_NORMAL} alt={store.TITLE} />
-                        </Figure>
-                        <DESC>
-                            <H3>이름 : {store.MAIN_TITLE}</H3>
-                            <Address>주소 : {store.ADDR1}</Address>
-                            <TEL>연락처 : {store.CNTCT_TEL}</TEL>
-                            <MainMenu>메인메뉴 : {store.RPRSNTV_MENU}</MainMenu>
-                            <StoreInfo>소개 : {store.ITEMCNTNTS}</StoreInfo>
-                        </DESC>
-                    </INFO>
+                    <Inner>
+                        <INFO>
+                            <Figure>
+                                <Img src={store.MAIN_IMG_NORMAL} alt={store.TITLE} />
+                            </Figure>
+                            <DESC>
+                                <H3>이름 : {store.MAIN_TITLE}</H3>
+                                <Address>주소 : {store.ADDR1}</Address>
+                                <TEL>연락처 : {store.CNTCT_TEL}</TEL>
+                                <MainMenu>메인메뉴 : {store.RPRSNTV_MENU}</MainMenu>
+                                <StoreInfo>소개 : {store.ITEMCNTNTS}</StoreInfo>
+                            </DESC>
+                        </INFO>
+                    </Inner>
+
                 </li>
             }
         </UL>

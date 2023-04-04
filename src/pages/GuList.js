@@ -57,6 +57,8 @@ const GuList = ({ busanFood }) => {
     }, [busanFood, id])
 
 
+    var reg = /[\{\}\[\]\/?.,;|\)*`!^\-_+<>@\#$%&\\\=\(\'\"]/gi;
+
     return (
         <div className="gu_list">
             <div id="map" style={{ height: "500px" }}></div>

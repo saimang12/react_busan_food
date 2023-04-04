@@ -50,6 +50,8 @@ const AllLsit = ({ busanFood }) => {
         busanFood.length > 0 && KakaoMapScript();
     }, [busanFood])
 
+    var reg = /[\{\}\[\]\/?.,;|\)*`!^\-_+<>@\#$%&\\\=\(\'\"]/gi;
+
     return (
         <div className="all_list">
             {
@@ -70,7 +72,7 @@ const AllLsit = ({ busanFood }) => {
                                                 <h3>[{it.GUGUN_NM}] {it.TITLE}</h3>
                                                 <p>연락처 : {it.CNTCT_TEL}</p>
                                                 <p>대표메뉴 : {it.RPRSNTV_MENU}</p>
-                                                <span>{it.USAGE_DAY_WEEK_AND_TIME.replace()}</span>
+                                                <span>주소 : {it.ADDR1}</span>
                                             </div>
 
                                         </li>
