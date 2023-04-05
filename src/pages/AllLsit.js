@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
+import Slide from "./Slide";
 
 
 
@@ -57,6 +58,9 @@ const AllLsit = ({ busanFood }) => {
             {
                 <>
                     <div id="map" style={{ height: "500px", }}></div>
+                    <Routes>
+                        <Route path="/" element={<Slide busanFood={busanFood} />} />
+                    </Routes>
                     <div className="inner">
                         <ul>
                             {busanFood &&
