@@ -64,7 +64,7 @@ const GuList = ({ busanFood }) => {
             <div id="map" style={{ height: "500px" }}></div>
             <div className="inner">
                 <ul>
-                    {
+                    {guList &&
                         guList.map(it => {
                             return (
                                 <li key={it.UC_SEQ}>

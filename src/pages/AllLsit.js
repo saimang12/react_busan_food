@@ -59,7 +59,7 @@ const AllLsit = ({ busanFood }) => {
                     <div id="map" style={{ height: "500px", }}></div>
                     <div className="inner">
                         <ul>
-                            {
+                            {busanFood &&
                                 busanFood.map(it => {
                                     return (
                                         <li key={it.UC_SEQ}>

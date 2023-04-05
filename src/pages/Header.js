@@ -6,7 +6,7 @@ const Header = ({ gugun }) => {
         <header>
             <div className="inner">
                 <h1 style={{ textAlign: 'center' }}>
-                    <Link to='/'>부산맛집지도</Link>
+                    <Link to='https://saimang12.github.io/react_busan_food/'>부산맛집지도</Link>
                 </h1>
                 <Nav gugun={gugun} />
             </div>
