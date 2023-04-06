@@ -5,15 +5,19 @@ import { useEffect, useState } from "react";
 
 
 const Header = ({ gugun, search, setSearch, busanFood, setBusanFood }) => {
-    const [input, setInput] = useState('123')
+    const [input, setInput] = useState('')
     const searchHandler = (e) => {
         e.preventDefault();
-        setSearch(input);
-        setBusanFood(itm)
+        if (input.length < 2) {
+            alert('두글자')
+        } else {
+            const itm = busanFood.filter(it => it.MAIN_TITLE.includes(input));
+            setBusanFood(itm);
+        }
+
+
     }
 
-    const itm = busanFood.filter(it => it.MAIN_TITLE === search);
-    console.log(itm);
 
     return (
         <header>

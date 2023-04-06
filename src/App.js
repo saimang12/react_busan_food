@@ -26,10 +26,6 @@ const App = () => {
 
 
 
-
-
-
-
     useEffect(() => {
         getData();
     }, [max]);
