@@ -4,7 +4,7 @@ import Slide from "./Slide";
 
 
 
-const AllLsit = ({ busanFood }) => {
+const AllLsit = ({ busanFood, max, setMax }) => {
 
     const { kakao } = window;
 
@@ -51,7 +51,7 @@ const AllLsit = ({ busanFood }) => {
         busanFood.length > 0 && KakaoMapScript();
     }, [busanFood])
 
-    var reg = /[\{\}\[\]\/?.,;|\)*`!^\-_+<>@\#$%&\\\=\(\'\"]/gi;
+
 
     return (
         <div className="all_list">
@@ -62,6 +62,9 @@ const AllLsit = ({ busanFood }) => {
                         <Route path="/" element={<Slide busanFood={busanFood} />} />
                     </Routes>
                     <div className="inner">
+                        <div className="tit">
+                            <h2>All Busan Food List</h2>
+                        </div>
                         <ul>
                             {busanFood &&
                                 busanFood.map(it => {
@@ -76,7 +79,6 @@ const AllLsit = ({ busanFood }) => {
                                                 <h3>[{it.GUGUN_NM}] {it.TITLE}</h3>
                                                 <p>연락처 : {it.CNTCT_TEL}</p>
                                                 <p>대표메뉴 : {it.RPRSNTV_MENU}</p>
-                                                <span>주소 : {it.ADDR1}</span>
                                             </div>
 
                                         </li>
@@ -84,8 +86,10 @@ const AllLsit = ({ busanFood }) => {
                                 })
                             }
                         </ul>
+                        <span className="more">
+                            <button onClick={() => { setMax(max + 8) }}>더보기</button>
+                        </span>
                     </div>
-
                 </>
 
 

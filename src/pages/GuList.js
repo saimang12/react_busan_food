@@ -29,7 +29,6 @@ const GuList = ({ busanFood }) => {
             }
         });
 
-        console.log(positions)
 
         // 마커 이미지의 이미지 주소입니다
         var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
@@ -57,12 +56,13 @@ const GuList = ({ busanFood }) => {
     }, [busanFood, id])
 
 
-    var reg = /[\{\}\[\]\/?.,;|\)*`!^\-_+<>@\#$%&\\\=\(\'\"]/gi;
-
     return (
         <div className="gu_list">
             <div id="map" style={{ height: "500px" }}></div>
             <div className="inner">
+                <div className="tit">
+                    <h2>{id} 맛집</h2>
+                </div>
                 <ul>
                     {guList &&
                         guList.map(it => {

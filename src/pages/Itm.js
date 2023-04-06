@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const UL = styled.ul`
-    margin: 30px 100px;
+    padding: 0 0 100px 0;
 `
 const Inner = styled.div`
     width: 1600px;
@@ -27,21 +27,25 @@ const DESC = styled.div`
 `
 const H3 = styled.h3`
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0 0 20px 0;
 `
 const Address = styled.address`
     margin: 0 0 10px 0;
 `
 const TEL = styled.p`
-margin: 0 0 10px 0;
+    margin: 0 0 10px 0;
 `
 
 const MainMenu = styled.p`
-margin: 0 0 10px 0;
+    margin: 0 0 10px 0;
 `
 const StoreInfo = styled.p`
-margin: 0 0 10px 0;
+    margin: 0 0 10px 0;
+`
+const Time = styled.p`
+    letter-spacing: 1px;
+    
 `
 
 
@@ -77,24 +81,26 @@ const Itm = ({ busanFood }) => {
         store && KakaoMapScript()
     }, [store])
 
+    var reg = /[\{\}\[\]\/?.,;|\)*`!^\-_+<>@\#$%&\\\=\(\'\"]/gi;
 
     return (
         <UL>
             {
                 store && <li>
 
-                    <div id="map" style={{ height: "500px" }}></div>
+                    <div id="map" style={{ height: "500px", margin: "0 auto 30px auto" }}></div>
                     <Inner>
                         <INFO>
                             <Figure>
                                 <Img src={store.MAIN_IMG_NORMAL} alt={store.TITLE} />
                             </Figure>
                             <DESC>
-                                <H3>이름 : {store.MAIN_TITLE}</H3>
+                                <H3>{store.MAIN_TITLE}</H3>
                                 <Address>주소 : {store.ADDR1}</Address>
                                 <TEL>연락처 : {store.CNTCT_TEL}</TEL>
                                 <MainMenu>메인메뉴 : {store.RPRSNTV_MENU}</MainMenu>
                                 <StoreInfo>소개 : {store.ITEMCNTNTS}</StoreInfo>
+                                <Time>{store.USAGE_DAY_WEEK_AND_TIME.replace(reg, '')}</Time>
                             </DESC>
                         </INFO>
                     </Inner>

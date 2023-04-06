@@ -47,8 +47,7 @@ body {
 
     border: 15px solid #fff;
     outline: 1px solid #ddd;
-    padding: 15px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 0 auto;
 }
 
 header {
@@ -144,32 +143,42 @@ header {
 
 
 .all_list {
-    .inner {
+    >.inner {
         width: 1600px;
         margin: 0 auto;
-        padding: 30px 0 100px 0;
+        padding: 100px 0;
 
-        ul {
+        >.tit {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 50px 0;
+            text-align: center;
+        }
+
+        >ul {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 50px 30px;
+            margin: 0 0 50px 0;
 
             li {
-                display: flex;
+                // display: flex;
 
 
                 a {
-                    flex: 4.5;
+
 
                     img {
+                        width: 100%;
                         height: 200px;
                         object-fit: cover;
+                        border-radius: 30px 30px 0 0;
                     }
                 }
 
                 .desc {
-                    flex: 5.5;
-                    padding: 20px 20px;
+                    min-height: 150px;
+                    padding: 20px;
                     background: #f4f4f4;
 
                     h3 {
@@ -186,48 +195,132 @@ header {
                 }
             }
         }
+
+        .more {
+            display: block;
+            text-align: center;
+
+            button {
+                border: none;
+                background: #333;
+                color: #fff;
+                padding: 8px 20px;
+                cursor: pointer;
+            }
+        }
     }
 }
 
 .MainVisual {
-    .inner {
-        padding: 0 0;
-        margin: 0 auto 100px auto;
+    padding: 100px 0;
+    background: #f9f9f9;
 
-        .itm {
-            padding: 0 15px 50px 15px;
+    >.inner {
+        width: 1600px;
+        position: relative;
+        margin: 0 auto 0 auto;
 
-            .slide {
-                display: flex;
+        >.tit {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
 
-                a {
-                    flex: 4.5;
+        .main_slide {
+            position: relative;
+            padding: 50px 0;
+            margin: 0 -15px;
 
-                    figure {
-                        img {
-                            height: 200px;
-                            object-fit: cover;
+            .slick-dots {
+                position: absolute;
+                inset: auto auto 3px 50%;
+                transform: translate(-50%, 0);
+
+
+                >li {
+                    display: inline-block;
+                    margin: 0 5px;
+
+                    button {
+                        font-size: 0;
+                        border: none;
+                        background: #ddd;
+                        width: 15px;
+                        height: 15px;
+                        transform: rotate(45deg);
+                        cursor: pointer;
+                    }
+
+                    &.slick-active {
+                        button {
+                            background: tomato;
                         }
                     }
                 }
+            }
 
-                .desc {
-                    flex: 5.5;
-                    padding: 20px 20px;
-                    background: #f4f4f4;
+            .itm {
+                padding: 25px 15px;
 
-                    h3 {
-                        margin: 0 0 20px 0;
-                        font-size: 18px;
-                        font-weight: 500;
+                .slide {
+                    display: flex;
+
+                    a {
+                        position: relative;
+                        flex: 4.5;
+
+                        figure {
+                            img {
+                                height: 200px;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .star {
+                            position: absolute;
+                            inset: 5px auto auto 5px;
+                            font-size: 30px;
+                            color: #000;
+                        }
                     }
 
-                    p {
-                        line-height: 23px;
-                        font-size: 15px;
-                        word-break: keep-all;
+                    .desc {
+                        flex: 5.5;
+                        padding: 20px 20px;
+                        background: #f4f4f4;
+
+                        h3 {
+                            margin: 0 0 20px 0;
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+
+                        p {
+                            line-height: 23px;
+                            font-size: 15px;
+                            word-break: keep-all;
+                        }
                     }
                 }
+            }
+        }
+
+
+
+        .arrows {
+            font-size: 40px;
+            cursor: pointer;
+
+            .left {
+                position: absolute;
+                inset: 50% auto auto -10px;
+                transform: translate(-100%, -50%);
+            }
+
+            .right {
+                position: absolute;
+                inset: 50% -10px auto auto;
+                transform: translate(100%, -50%);
             }
         }
     }
@@ -238,6 +331,13 @@ header {
         width: 1600px;
         margin: 0 auto;
         padding: 30px 0 100px 0;
+
+        .tit {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 50px 0;
+        }
 
         ul {
             display: grid;

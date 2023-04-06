@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import MainSlide from "react-slick";
 import "slick-carousel/slick/slick.css";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { BsChevronLeft, BsChevronRight, BsStar, BsStarFill } from "react-icons/bs";
 import { useRef } from "react";
 
 const Slide = ({ busanFood }) => {
@@ -11,12 +11,18 @@ const Slide = ({ busanFood }) => {
     const MainSlideOption = {
         arrows: false,
         slidesToShow: 3,
+        slidesToScroll: 3,
         rows: 2,
+        dots: true,
     }
     return (
         <div className="MainVisual">
+
             <div className="inner">
-                <MainSlide {...MainSlideOption} ref={s}>
+                <div className="tit">
+                    <h2>Busan Food</h2>
+                </div>
+                <MainSlide {...MainSlideOption} ref={s} className="main_slide">
                     {
                         busanFood &&
                         busanFood.map((it, idx) => {
@@ -28,6 +34,7 @@ const Slide = ({ busanFood }) => {
                                             <figure>
                                                 <img src={it.MAIN_IMG_NORMAL} alt={it.TITLE} />
                                             </figure>
+                                            <BsStar className="star" />
                                         </Link>
                                         <div className="desc">
                                             <h3>[{it.GUGUN_NM}] {it.TITLE}</h3>
@@ -39,7 +46,7 @@ const Slide = ({ busanFood }) => {
                                 </div>
 
                             )
-                        })
+                        }).slice(0, 48)
 
                     }
                 </MainSlide>
