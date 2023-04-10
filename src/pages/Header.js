@@ -1,7 +1,7 @@
 import { BsSearch } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import Nav from "./Nav";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 const Header = ({ gugun, setSearch, busanFood }) => {

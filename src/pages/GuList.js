@@ -1,10 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
-import styled from "styled-components";
 
-const H3 = styled.h3`
-    min-height: 40px;
-`
+
+
 
 const GuList = ({ busanFood }) => {
     const { id } = useParams();
@@ -31,7 +29,7 @@ const GuList = ({ busanFood }) => {
 
 
         // 마커 이미지의 이미지 주소입니다
-        var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+        // var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
 
         for (var i = 0; i < positions.length; i++) {
 

@@ -78,10 +78,10 @@ const Itm = ({ busanFood }) => {
     }
 
     useEffect(() => {
-        store && KakaoMapScript()
+        store && KakaoMapScript();
     }, [store])
 
-    var reg = /[\{\}\[\]\/?.,;|\)*`!^\-_+<>@\#$%&\\\=\(\'\"]/gi;
+    var reg = /[\]?.,;|*`!^\-_+<>@$%&\\]/gi;
 
     return (
         <UL>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import MainSlide from "react-slick";
 import "slick-carousel/slick/slick.css";
-import { BsChevronLeft, BsChevronRight, BsStar, BsStarFill } from "react-icons/bs";
+import { BsChevronLeft, BsChevronRight, BsStar } from "react-icons/bs";
 import { useRef } from "react";
 
 const Slide = ({ busanFood }) => {
