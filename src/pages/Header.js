@@ -10,7 +10,13 @@ const Header = ({ gugun, setSearch, busanFood }) => {
 
     const text = useRef(null)
 
-    const r = busanFood.filter(it => it.MAIN_TITLE.includes(input) || it.GUGUN_NM.includes(input) || it.ITEMCNTNTS.includes(input) || it.TITLE.includes(input) || it.RPRSNTV_MENU.includes(input));
+    const r = busanFood.filter(it => it.MAIN_TITLE.includes(input)
+        || it.GUGUN_NM.includes(input)
+        || it.ITEMCNTNTS.includes(input)
+        || it.TITLE.includes(input)
+        || it.RPRSNTV_MENU.includes(input)
+
+    );
 
     const searchHandler = (e) => {
         e.preventDefault();
