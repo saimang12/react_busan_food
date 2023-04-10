@@ -9,7 +9,7 @@ const Search = ({ search, setSearch }) => {
                     <span>{`맛집 검색결과 '${search.length}'건`}</span>
                 </div>
                 <ul>
-                    {
+                    {search &&
                         search.map((it, idx) => {
                             return (
                                 <li key={it.UC_SEQ}>
@@ -23,7 +23,6 @@ const Search = ({ search, setSearch }) => {
                                         <p>연락처 : {it.CNTCT_TEL}</p>
                                         <p>대표메뉴 : {it.RPRSNTV_MENU}</p>
                                     </div>
-
                                 </li>
                             )
                         })

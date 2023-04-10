@@ -9,6 +9,14 @@ const Inner = styled.div`
     width: 1600px;
     margin: 0 auto;
 `
+
+const H2 = styled.h2`
+    font-size: 30px;
+    font-weight:700;
+    text-align: center;
+    margin: 0 0 50px 0;
+`
+
 const INFO = styled.div`
     display: flex;
     
@@ -88,8 +96,9 @@ const Itm = ({ busanFood }) => {
             {
                 store && <li>
 
-                    <div id="map" style={{ height: "500px", margin: "0 auto 30px auto" }}></div>
+                    <div id="map" style={{ height: "500px", margin: "0 auto 100px auto" }}></div>
                     <Inner>
+                        <H2>상세정보</H2>
                         <INFO>
                             <Figure>
                                 <Img src={store.MAIN_IMG_NORMAL} alt={store.TITLE} />

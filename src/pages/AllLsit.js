@@ -86,7 +86,12 @@ const AllLsit = ({ busanFood, max, setMax }) => {
                             }
                         </ul>
                         <span className="more">
-                            <button onClick={() => { setMax(max + 8) }}>더보기</button>
+                            {
+                                max < 149 ?
+                                    <button onClick={() => { setMax(max + 8) }}>더보기</button>
+                                    : <></>
+                            }
+
                         </span>
                     </div>
                 </>
