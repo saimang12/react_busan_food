@@ -1,19 +1,23 @@
 import { BsSearch } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Nav from "./Nav";
 import { useEffect, useState } from "react";
 
 
 const Header = ({ gugun, search, setSearch, busanFood, setBusanFood }) => {
+    const navigate = useNavigate();
     const [input, setInput] = useState('')
     const searchHandler = (e) => {
         e.preventDefault();
-        if (input.length < 2) {
-            alert('두글자')
-        } else {
-            const itm = busanFood.filter(it => it.MAIN_TITLE.includes(input));
-            setBusanFood(itm);
-        }
+        // navigate(`/search`)
+        // if (input.length < 2) {
+        //     alert('두글자')
+        // } else {
+        // const itm = busanFood.filter(it => it.TITLE.includes(input));
+        // setBusanFood(itm)
+        // console.log(itm)
+
+        // }
 
 
     }
